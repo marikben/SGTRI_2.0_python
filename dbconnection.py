@@ -10,12 +10,12 @@ from fastapi.encoders import jsonable_encoder
 from objectid import PydanticObjectId
 
 app = Flask(__name__)
-app.config["MONGO_URI"] = "mongodb+srv://hesso:admin@hesso.q1q2q.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+app.config["MONGO_URI"] = "mongodb+srv://mariam:cocktail@cocktails.xvbgt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 mongo = PyMongo(app)
 api = Api(app)
 
 class HESSO(Resource):
-    @app.route("/hesso/<string:name>", methods=["GET"])
+    @app.route("/cocktails/<string:name>", methods=["GET"])
     def get(name):
         project = mongo.db.hesso.find_one_or_404({"name": name})
         return Project(**project).to_json() 
@@ -28,7 +28,7 @@ class HESSO(Resource):
         print(project)
         return project.to_json()
 
-api.add_resource(HESSO, '/hesso')  # '/users' is our entry point for Users
+api.add_resource(HESSO, '/cocktails')  # '/users' is our entry point for Users
 
 if __name__ == '__main__':
     app.run()
