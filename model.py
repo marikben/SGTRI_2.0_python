@@ -11,7 +11,8 @@ from fastapi.encoders import jsonable_encoder
 
 class Project(BaseModel):
     id: Optional[PydanticObjectId] = Field(None, alias="_id")
-    name: str
+    name: str,
+    attributes: List[str]
 
     def to_json(self):
         return jsonable_encoder(self, exclude_none=True)
