@@ -1,0 +1,130 @@
+[
+  {
+    "id": null,
+    //"_idQuestionMotif": { "$oid": "5f7daa2b8ec9dfb536781b1c" },
+    "name": "Tags",
+    "attributes": [
+      { "textQuestion": ""}
+    ],
+    "_idTags": [
+      { "name": "tag1" },
+      { "name": "tag2" }
+    ]
+  },
+  {
+    "id": null,
+    //"_idQuestionParaVitaux": { "$oid": "5f7daa2c8ec9dfb536781b1d" },
+    "name": "QuestionParaVitaux",
+    "attributes": [
+      {"textQuestion": "",
+        "texteReponse": ""}
+    ],
+    "_idTags": [
+      { "name": "tag1" },
+      { "name": "tag2" }
+    ]
+  },
+  {
+    "id": null,
+    //"_idQuestionAnamnese": { "$oid": "5f7daa2e8ec9dfb536781b1e" },
+    "name": "QuestionAnamnese",
+    "attributes": [
+      {"textQuestion": "",
+        "texteReponse": ""}
+    ],
+    "_idTags": [
+      { "name": "tag1" },
+      { "name": "tag2" }
+    ]
+  },
+  {
+    "id": null,
+    //"_idQuestionMotif": { "$oid": "5f7daa2f8ec9dfb536781b1f" },
+    "name": "QuestionMotif",
+    "attributes": [
+      {"texteReponse": "",
+        "textQuestion": ""}
+    ],
+    "_idTags": [
+      { "name": "tag1" },
+      { "name": "tag2" }
+    ]
+  },
+  {
+    "id": null,
+    // "_idDegrees": { "$oid": "5f7daa308ec9dfb536781b2" },
+    "name": "Degree",
+    "attributes": [{
+    "degree": 0
+  }
+]
+  },
+  {
+    "id": null,
+    //"_idPatient": { "$oid": "5f7daa308ec9dfb536781b20" },
+    "name": "Patient",
+    "attributes": [{
+    "enre": 0,
+    "age": 0,
+    "_idSigneVitaux": "",
+    "_idQuestionParaVitaux": "",
+    "_idQuestionAnamnese": "",
+    "_idMotif": "",
+    "_idQuestionMotif": ""
+  }
+]
+  },
+  {
+    "id": null,
+    //"_idMotif": { "$oid": "5f7daa328ec9dfb536781b21" },
+    "name": "Motif",
+    "attributes": [
+      {
+        "description": "",
+        "_idDegrees": "",
+        "_idConditions": "",
+        "_idParamVitaux": ""
+      }
+    ]
+  },
+  {
+    "id": null,
+    //"_idCondition": { "$oid": "5f7daa338ec9dfb536781b22" },
+    "name": "Condition",
+    "attributes": [{
+    "_idMotif": "",
+    "_idDegrees": "",
+    "textQuestion": ""
+  }
+]
+  },
+  {
+    "id": null,
+    //"_idSigneVitaux": { "$oid": "5f7daa358ec9dfb536781b23" },
+    "name": "SigneVitaux",
+    "attributes": [
+      { "glasgow": 0 ,
+        "_idPupilles": "",
+        "pulsation": 0,
+        "vector2tas": "",
+        "vector2tad": "",
+        "spo2": 0.0,
+        "peakFlowMin": 0.0,
+        "peakflowCM": 0.0,
+        "glycemie": 0.0,
+        "frequeneRespiratoire": 0.0,
+        "cetonemie": 0.0,
+        "douleur": 0
+      }
+    ]
+  },
+  {
+    "id": null,
+    //"_idPupilles": { "$oid": "5f7daa378ec9dfb536781b24" },
+    "name": "Pupilles",
+    "attributes": [{
+      "pupilleReact": "" ,
+      "pupilleSecondaire": "" }
+    ]
+  }
+]
