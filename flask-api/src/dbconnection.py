@@ -1,6 +1,6 @@
 from flask import Flask, request
 from flask_restful import Api, Resource
-from model import Project
+from model import Collection
 from flask_pymongo import PyMongo
 from pymongo.collection import Collection, ReturnDocument
 import fastapi
@@ -14,23 +14,21 @@ app.config["MONGO_URI"] = "mongodb+srv://mariam:cocktail@cocktails.xvbgt.mongodb
 mongo = PyMongo(app)
 api = Api(app)
 
-collectionnames: Collection = mongo.db.collections
+collections: Collection = mongo.db.collections
 
 @app.route("/")
 def hello():
     return "Hello World!"
 
-@app.route("/cocktails/", methods=["POST"])
-def new_cocktail():
-    raw_cocktail = request.get_json()
-    raw_cocktail["date_added"] = datetime.utcnow()
+@app.route("/documents/", methods=["POST"])
+def new_doc():
+    raw_doc = request.get_json()
+    doc = Collection(**raw_doc)
+    insert_result = collections.insert_one(doc.to_bson())
+    doc.id = PydanticObjectId(str(insert_result.inserted_id))
+    print(doc)
 
-    cocktail = Cocktail(**raw_cocktail)
-    insert_result = collections.insert_one(cocktail.to_bson())
-    cocktail.id = PydanticObjectId(str(insert_result.inserted_id))
-    print(cocktail)
-
-    return cocktail.to_json()
+    return doc.to_json()
 
 if __name__ == '__main__':
     app.run()

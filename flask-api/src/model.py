@@ -1,22 +1,23 @@
-from typing import Optional
-
 from pydantic import BaseModel, Field
-
 from objectid import PydanticObjectId
-
+from pydantic import BaseModel, Field
+from typing import List, Optional, Union
 import fastapi
 
 from fastapi.encoders import jsonable_encoder
 
+class IDTags(BaseModel):
+    _idtags : Optional[List[str]] = []   
 
-class Cocktail(BaseModel):
-    id: Optional[PydanticObjectId] = Field(None, alias="_id")
-    attributes: str
+class Attributes(BaseModel):
+    attributes : List[str] = [] 
 
-class Project(BaseModel):
+class Collection(BaseModel):
     id: Optional[PydanticObjectId] = Field(None, alias="_id")
     name: str
-    attributes: str
+    attributes: Optional[List[str]] = []
+    #attributes: List[Attributes] = []
+    #_idtags = List[IDTags] = []
 
     def to_json(self):
         return jsonable_encoder(self, exclude_none=True)
