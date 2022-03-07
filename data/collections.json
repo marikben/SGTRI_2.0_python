@@ -1,7 +1,6 @@
 [
   {
     "id": null,
-    //"_idQuestionMotif": { "$oid": "5f7daa2b8ec9dfb536781b1c" },
     "name": "Tags",
     "attributes": [
       { "textQuestion": ""}
@@ -13,7 +12,6 @@
   },
   {
     "id": null,
-    //"_idQuestionParaVitaux": { "$oid": "5f7daa2c8ec9dfb536781b1d" },
     "name": "QuestionParaVitaux",
     "attributes": [
       {"textQuestion": "",
@@ -26,7 +24,6 @@
   },
   {
     "id": null,
-    //"_idQuestionAnamnese": { "$oid": "5f7daa2e8ec9dfb536781b1e" },
     "name": "QuestionAnamnese",
     "attributes": [
       {"textQuestion": "",
@@ -39,7 +36,6 @@
   },
   {
     "id": null,
-    //"_idQuestionMotif": { "$oid": "5f7daa2f8ec9dfb536781b1f" },
     "name": "QuestionMotif",
     "attributes": [
       {"texteReponse": "",
@@ -52,7 +48,6 @@
   },
   {
     "id": null,
-    // "_idDegrees": { "$oid": "5f7daa308ec9dfb536781b2" },
     "name": "Degree",
     "attributes": [{
     "degree": 0
@@ -61,7 +56,6 @@
   },
   {
     "id": null,
-    //"_idPatient": { "$oid": "5f7daa308ec9dfb536781b20" },
     "name": "Patient",
     "attributes": [{
     "enre": 0,
@@ -76,7 +70,6 @@
   },
   {
     "id": null,
-    //"_idMotif": { "$oid": "5f7daa328ec9dfb536781b21" },
     "name": "Motif",
     "attributes": [
       {
@@ -89,7 +82,6 @@
   },
   {
     "id": null,
-    //"_idCondition": { "$oid": "5f7daa338ec9dfb536781b22" },
     "name": "Condition",
     "attributes": [{
     "_idMotif": "",
@@ -100,7 +92,6 @@
   },
   {
     "id": null,
-    //"_idSigneVitaux": { "$oid": "5f7daa358ec9dfb536781b23" },
     "name": "SigneVitaux",
     "attributes": [
       { "glasgow": 0 ,
@@ -120,7 +111,6 @@
   },
   {
     "id": null,
-    //"_idPupilles": { "$oid": "5f7daa378ec9dfb536781b24" },
     "name": "Pupilles",
     "attributes": [{
       "pupilleReact": "" ,

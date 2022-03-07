@@ -9,10 +9,14 @@ import fastapi
 from fastapi.encoders import jsonable_encoder
 
 
+class Cocktail(BaseModel):
+    id: Optional[PydanticObjectId] = Field(None, alias="_id")
+    attributes: str
+
 class Project(BaseModel):
     id: Optional[PydanticObjectId] = Field(None, alias="_id")
-    name: str,
-    attributes: List[str]
+    name: str
+    attributes: str
 
     def to_json(self):
         return jsonable_encoder(self, exclude_none=True)
